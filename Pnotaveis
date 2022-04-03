@@ -1,0 +1,49 @@
+package Pnotaveis;
+
+import java.util.Scanner;
+
+public class Principal {
+
+	public static void main(String[] args) {
+		int x, y, x1, xy, y1, r;
+		Scanner ler = new Scanner(System.in);
+		
+		
+		System.out.println("Entre com o valor de X: ");
+		x = ler.nextInt();
+		
+		System.out.println("Entre com o valor de Y: ");
+		y = ler.nextInt();
+		
+		System.out.println("\nResolvendo o Quadrado da soma");
+		
+		System.out.println("A expressao inicial ficou: ("+ x + " + " + y +")^2");
+		
+		x1 = x*x;
+		xy = 2*x*y;
+		y1 = y*y;
+		
+		System.out.println("Apos ficou: ("+ x1 + "+ " + xy +"+ " + y1 + ")");
+		
+		
+		r = x1+xy+y1;
+		
+		System.out.println("Resultado final: " + r);
+		
+		System.out.println("\nResolvendo o Quadrado da diferença");
+		
+		System.out.println("A expressao inicial ficou: ("+ x + " - " + y +")^2");
+		
+		x1 = x*x;
+		xy = 2*x*y;
+		y1 = y*y;
+		
+		System.out.println("Apos ficou: ("+ x1 + "- " + xy +"+ " + y1 + ")");
+		
+		
+		r = x1-xy+y1;
+		
+		System.out.println("Resultado final: " + r);
+	}
+
+}
