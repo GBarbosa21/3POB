@@ -1,0 +1,61 @@
+package m;
+
+public class Principal {
+
+	public static void main(String[] args) {
+		
+		int mat [][] = {{4,3,2,1}, {8,7,6,5}, {3,4,5,1}, {3,1,5,6}};
+		int matAux [][] = {{4,3,2,1}, {8,7,6,5}, {3,4,5,1}, {3,1,5,6}, {4,3,2,1}, {8,7,6,5}};
+		
+		int i;
+		for (i=0; i<4; i++) {
+			for (int j=0; j<4; j++) {
+				System.out.printf(mat[i][j]+"\t");
+			}
+			System.out.printf("\n");
+		}
+		
+		int s1=mat[0][0], s2=mat[0][1] , s3=mat[0][2] , s4=mat[0][3];
+		//int d1=0 , d2=0 , d3=0 , d4=0;
+		
+		int j = 0;
+		while (j<=4) {
+				for (i=0; i<=4; i++) {
+			if (i==j) {		
+				if(i!=0)
+				{
+					s1= s1*matAux[i][j];
+				}
+			}
+				else {
+					if (i==j+1) {
+						if(i!=1) {
+							s2 = s2*matAux[i][j];
+						}
+					}
+					else {
+						if (i==j+2) {
+							if(i!=3) {
+								s3 = s3*matAux[i][j];
+							}
+						}
+						else {
+					if (i==j+3) {
+						if(i!=4) {
+							s4 = s4*matAux[i][j];
+								}
+							}
+						}
+					}
+				}
+			}
+			j++;
+		}
+		
+		System.out.printf("\n"+ s1);
+		System.out.printf("\n"+ s2);
+		System.out.printf("\n"+ s3);
+		System.out.printf("\n"+ s4);
+	}
+
+}
